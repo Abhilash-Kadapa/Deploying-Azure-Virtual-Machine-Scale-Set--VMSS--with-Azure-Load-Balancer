@@ -18,7 +18,7 @@ The implementation includes VMSS deployment, networking configuration, inbound r
 - Install and configure NGINX web server
 - Ensure high availability and fault tolerance
 
-## 🛠 Services Used
+##Services Used
 - Azure Virtual Machine Scale Set (VMSS)
 - Azure Load Balancer
 - Azure Virtual Network (VNet)
