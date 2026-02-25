@@ -1,0 +1,101 @@
+#Deploying Azure Virtual Machine Scale Set (VMSS) with Azure Load Balancer using Azure Portal
+
+##Project Objective
+
+Deploy a scalable web application using:
+Azure Virtual Machine Scale Set (VMSS)
+Azure Load Balancer
+Virtual Network
+Network Security Group
+Autoscaling Rules
+
+##Services Used
+Microsoft Azure
+Azure Virtual Machine Scale Sets
+Azure Load Balancer
+Azure Virtual Network
+Azure Monitor
+
+##Prerequisites
+Azure Subscription
+Contributor access
+Basic knowledge of:
+Networking
+Virtual Machines
+Load Balancer
+Autoscaling
+
+##Project Implementation – Step by Step
+
+Step 1: Create Resource Group
+Login to Azure Portal
+Go to Resource Groups
+Click Create
+Name: VMSS-RG
+Region: East US (or your preferred region)
+
+Step 2: Create Virtual Machine Scale Set (VMSS)
+Search Virtual Machine Scale Sets
+Click Create
+Choose:
+Resource Group: VMSS-RG
+Name: VMSS-Webserver
+Image: Ubuntu 22.04 LTS
+Size: Standard B2as v2
+Instance count: 2
+Authentication: SSH/Public key or Password
+
+Step 3: Configure Load Balancer
+Search Load Balancer
+Click Create
+Choose:
+Resourse Group: VMSS-RG
+Name: VMSS_LB
+Frontend pool:Frontend01
+Backend pool: Backens01 
+
+Step 4: Configure Networking
+During VMSS creation:
+Create new Virtual Network
+Subnet: default
+Select Azure Load Balancer
+Create new Load Balancer:
+Type: Public
+SKU: Standard
+Add inbound rule:
+Port 80 (HTTP)
+
+Step 5: Install Web Server (Custom Script Extension)
+After deployment:
+Go to:
+VMSS → Extensions → Add
+Add Custom Script:
+#!/bin/bash
+#Install Apache web server
+sudo apt update
+sudo apt install -y apache2
+#Start and enable Apache service
+sudo systemctl start apache2
+sudo systemctl enable apache2
+#Get the server hostname
+HOSTNAME=$(hostname)
+#Create a sample webpage with the server name
+sudo bash-c "echo\"<html><body><h1>Welcome to $HOSTNAME!</h1>
+</body></html>\"> /var/www/html/index.html"
+
+Step 6: Configure Autoscaling
+Go to VMSS
+Select Scaling
+Enable autoscale
+Configure:
+Minimum: 2
+Maximum: 5
+Scale out: CPU > 70%
+Scale in: CPU < 30%
+
+Step 7: Test Load Balancer
+Go to Load Balancer
+Copy Public IP
+Open in browser:
+http://Public-IP
+
