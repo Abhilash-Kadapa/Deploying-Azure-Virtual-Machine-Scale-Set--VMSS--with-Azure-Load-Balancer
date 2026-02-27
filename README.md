@@ -1,4 +1,4 @@
-#**Deploying-Azure-Virtual-Machine-Scale-Set--VMSS--with-Azure-Load-Balancer**
+**Deploying-Azure-Virtual-Machine-Scale-Set--VMSS--with-Azure-Load-Balancer**
 
 
 [Implementation](https://github.com/Abhilash-Kadapa/Deploying-Azure-Virtual-Machine-Scale-Set--VMSS--with-Azure-Load-Balancer/tree/main/Deploying%20Azure%20Virtual%20Machine%20Scale%20Set%20(VMSS)%20with%20Azure%20Load%20Balancer)
@@ -6,12 +6,12 @@
 [Screenshots](https://github.com/Abhilash-Kadapa/Deploying-Azure-Virtual-Machine-Scale-Set--VMSS--with-Azure-Load-Balancer/tree/main/Screenshots)
 
 
-##Project Overview
+**Project Overview**
 This project demonstrates how to deploy and configure an Azure Virtual Machine Scale Set (VMSS) integrated with Azure Load Balancer to build a highly available, scalable, and load-balanced web application in Microsoft Azure.
 
 The implementation includes VMSS deployment, networking configuration, inbound rules, autoscaling setup, and web server installation using custom script extensions.
 
-##Objectives
+Objectives
 - Deploy Azure VM Scale Set with multiple instances
 - Configure Azure Load Balancer for traffic distribution
 - Enable Autoscaling based on CPU utilization
