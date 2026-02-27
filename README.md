@@ -12,26 +12,26 @@ This project demonstrates how to deploy and configure an Azure Virtual Machine S
 
 The implementation includes VMSS deployment, networking configuration, inbound rules, autoscaling setup, and web server installation using custom script extensions.
 
-Objectives
+**Objectives**
 - Deploy Azure VM Scale Set with multiple instances
 - Configure Azure Load Balancer for traffic distribution
 - Enable Autoscaling based on CPU utilization
 - Install and configure NGINX web server
 - Ensure high availability and fault tolerance
 
-##Services Used
+**Services Used**
 - Azure Virtual Machine Scale Set (VMSS)
 - Azure Load Balancer
 - Azure Virtual Network (VNet)
 - Network Security Group (NSG)
 - Azure Monitor (Autoscaling)
 
-##Key Features
+**Key Features**
 - High Availability Architecture
 - Automatic Scaling (Scale In / Scale Out)
 - Load Balanced HTTP Traffic (Port 80)
 - Custom Script Extension for Web Server Setup
 - Centralized Monitoring
 
-##Outcome
+**Outcome**
 The deployed solution automatically distributes incoming traffic across multiple VM instances and scales based on workload demand, ensuring performance optimization and minimal downtime.
