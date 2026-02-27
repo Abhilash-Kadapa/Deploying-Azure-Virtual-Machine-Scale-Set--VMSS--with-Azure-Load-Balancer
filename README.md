@@ -7,6 +7,7 @@
 
 
 **Project Overview**
+
 This project demonstrates how to deploy and configure an Azure Virtual Machine Scale Set (VMSS) integrated with Azure Load Balancer to build a highly available, scalable, and load-balanced web application in Microsoft Azure.
 
 The implementation includes VMSS deployment, networking configuration, inbound rules, autoscaling setup, and web server installation using custom script extensions.
